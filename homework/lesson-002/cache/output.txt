@@ -1,0 +1,16 @@
+// TEST
+var cacher = new ObjectCache();
+cacher.set("key1","value1");
+console.log(cacher.has("key1"));
+console.log(cacher.get("key1"));
+console.log(cacher.remove(["key1","key2"]));
+console.log(cacher.has("key1"));
+
+
+
+true
+value1
+{ removed: [ 'key1' ],
+  exceptionRemoving: [],
+  notFound: [ 'key2' ] }
+false

@@ -1,0 +1,36 @@
+// Example
+// P.S: calculation added to toString just for visibility)
+var shapes = {};
+shapes.circle = new Circle(0.05);
+shapes.triangle = new Triangle(1, 2, 2);
+shapes.rectangle = new Rectangle(1, 1);
+shapes.trapezoid = new Trapezoid(1, 2, 3, 4, 2);
+for (var shape in shapes) {
+    console.log(shapes[shape].getDescription(Shape.TYPE_MM));
+    console.log(shapes[shape].getDescription(Shape.TYPE_M));
+    console.log('Perimeter in CM:' + shapes[shape].getPerimeter(Shape.TYPE_CM));
+    console.log('Area in METERS:' + shapes[shape].getArea(Shape.TYPE_M));
+    console.log('=====================');
+}
+
+
+Type:Circle Radius:0.05 Perimeter:314.1592653589793mm Area:7853.981633974484mm^2
+Type:Circle Radius:0.05 Perimeter:0.3141592653589793m Area:0.007853981633974483m^2
+Perimeter in CM:31.41592653589793cm
+Area in METERS:0.007853981633974483m^2
+=====================
+Type:Triangle Sides:[sideA:1000mm sideB:2000mm sideC:2000mm ] Perimeter:5000mm Area:968245.8365518543mm^2
+Type:Triangle Sides:[sideA:1m sideB:2m sideC:2m ] Perimeter:5m Area:0.9682458365518543m^2
+Perimeter in CM:500cm
+Area in METERS:0.9682458365518543m^2
+=====================
+Type:Rectangle Sides:[sideA:1000mm sideB:1000mm sideC:1000mm sideD:1000mm ] Perimeter:4000mm Area:1000000mm^2
+Type:Rectangle Sides:[sideA:1m sideB:1m sideC:1m sideD:1m ] Perimeter:4m Area:1m^2
+Perimeter in CM:400cm
+Area in METERS:1m^2
+=====================
+Type:Trapezoid Sides:[sideA:1000mm sideB:2000mm sideC:3000mm sideD:4000mm ] Perimeter:10000mm Area:4000000mm^2
+Type:Trapezoid Sides:[sideA:1m sideB:2m sideC:3m sideD:4m ] Perimeter:10m Area:4m^2
+Perimeter in CM:1000cm
+Area in METERS:4m^2
+=====================
